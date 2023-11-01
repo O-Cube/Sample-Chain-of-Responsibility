@@ -22,13 +22,7 @@
 	 Handler *add = new AdditionHandle(), *mul = new MultiplicationHandle(), \
 	 *sub = new SubtractionHandle(), *div = new DivisionHandle(), *mod = new ModuloHandle(), \
 	 *exp = new ExponentHandle();
-	 /*
-	 Handler mul;
-	 SubtractionHandle sub;
-	 DivisionHandle div;
-	 ModuloHandle mod;
-	 ExponentHandle exp;
-	 */
+	 
 	 /* chain of handlers */
 	 add->setNext(mul);
 	 mul->setNext(sub);

@@ -11,7 +11,7 @@ SRC = ./src/abstractHandler.cpp\
 # include directories
 INCLUDE = -I./src
 # compiler options
-CPPFLAGS = -Wall -g -std=c++14
+CPPFLAGS = -Wall -g -std=c++14 -O0
 # compiler 
 CC = g++
 # executable
@@ -19,7 +19,7 @@ EXECUTABLE = chain.out
 # remove
 RM = rm
 # list of objects
-OBJS = $(SRC:.cpp=.o)
+OBJS = $(SRC:.cpp=.o) 
 
 Build: $(EXECUTABLE)
 
@@ -28,6 +28,7 @@ $(EXECUTABLE): $(OBJS)
 
 %.o: %.cpp
 	$(CC) $(CPPFLAGS) $(INCLUDE) -c $< -o$@
+	
 
 Run: 
 	./$(EXECUTABLE)
